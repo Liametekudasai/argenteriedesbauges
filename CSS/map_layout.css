@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Roboto;
+  src: url('Roboto-Regular.ttf');
+}
+button a{
+  color: #767676;
+  text-decoration: none;
+}
+figure figcaption {
+    width: 75vw;
+    text-align: right;
+}
+#map {
+  height: 50vh; /* The height is 400 pixels */
+  width: 75vw; /* The width is the width of the web page */
+}
+#mapLogo{
+  height: 1em;
+}
+#openWithMapButton{
+  transition: 0.5s;
+  font-family: Roboto;
+  border: 0.25;
+  border-color: rgba(0, 0, 0, 0.6);
+  line-height: 2.5em;
+  padding: 0 20px;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  background-color: rgb(210, 230, 250);
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+#openWithMapButton:hover{
+  transition: 0.5s;
+  margin-top: 2px;
+  background-color: rgb(180, 220, 250);
+}
+#openWithMapButton:active{
+  transition: 0.01s;
+  margin-top: 2px;
+  background-color: rgb(100, 140, 170);
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}

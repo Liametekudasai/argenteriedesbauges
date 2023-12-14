@@ -1,0 +1,39 @@
+.imgDescription{
+    padding-bottom: 10px;
+    width: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.col {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imgContainer{
+    width: 25vw;
+    padding: 10px;
+}
+figure figcaption {
+    text-align: center;
+    width: 25vw;
+}
+#armoireVaisselle{
+    width: 75vw;
+}
+#armoireVaisselleCaption{
+    width: 75vw;
+}

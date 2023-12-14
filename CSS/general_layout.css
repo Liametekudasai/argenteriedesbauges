@@ -1,0 +1,41 @@
+@font-face {
+	font-family: "Montserrat";
+		src: url("../assets/Montserrat-Regular.otf")
+}
+@font-face {
+	font-family: "Montserrat-Bold";
+		src: url("../assets/Montserrat-Bold.otf");
+}
+html{
+	background-color: #ecf0f1;
+}
+strong{
+	font-family: 'Montserrat-Bold';
+}
+body{
+	font-family: 'Montserrat';
+	background-color: #ecf0f1;
+	margin: 0;
+}
+h1{
+	text-align: center;
+	color: red;
+	font-family: 'arial black';
+}
+
+h2 {
+  color: darkblue;
+  text-align: center;
+
+}
+
+p{
+	text-align: justify;
+	margin: 10px;
+}
+figure figcaption {
+	text-align: center;
+}
+.imgContainer{
+	border-radius: 10px;
+}

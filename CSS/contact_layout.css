@@ -1,0 +1,41 @@
+h1{
+}
+h2{
+    margin-top: 100px;
+}
+.imgDescription{
+    padding-bottom: 10px;
+    width: auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.col {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imgContainer{
+    width: 50vw;
+    padding: 10px;
+}
+figure figcaption {
+    width: 50vw;
+}
+span {
+  color: blue;
+
+}

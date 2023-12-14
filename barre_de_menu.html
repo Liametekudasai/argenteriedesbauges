@@ -1,0 +1,106 @@
+<!DOCTYPE html> <!--obligatoire pour l'écriture HTML-->
+<html> <!--obligatoire pour l'écriture HTML-->
+    <head>
+        <meta charset="utf-8" /> <!--donne la forme de language toujours utf-8-->
+        <style type="text/css">
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('assets/Montserrat-Regular.otf')
+            }
+            @font-face {
+                font-family: 'Montserrat-Bold';
+                src: url('assets/Montserrat-Bold.otf');
+            }
+
+            body{
+                font-family: 'Montserrat';
+                background-color: #ecf0f1;
+                margin: 0;
+            }
+
+            #homeButtonImage{
+                height: 5em;
+                width: auto;
+                float: left;
+                padding: 1em 20px;
+            }
+            .menuBar{
+                height: 7em;
+                width: 100%;
+                background-color: #babdbe;
+                background-image: url(menu background.JPG);
+                border-radius: 0px 0px 40px 40px;
+            }
+            .menuBar ul{
+                margin: 0;
+                padding: 1em;
+                float: left;
+                z-index: 1000;
+            }
+            .menuBar ul li {
+                float: left;
+                list-style: none;
+                position: relative;
+            }
+            .menuBar ul li a{
+                display: grid;
+                font-size: 24px;
+                padding: 24px 14px;
+                text-decoration: none;
+            }
+            .menuBar ul li ul{
+                display: grid;
+                max-height: 0;
+                position: absolute;
+                background-color: #babdbe;
+                padding: 0px;
+                border-radius: 0px 0px 8px 8px;
+                overflow: hidden;
+                transition:all 0.25s;
+            }
+            .menuBar ul li:hover ul{
+                max-height: 300%;
+                padding: 8px;
+            }
+            .menuBar ul li ul li{
+                width: auto;
+                border-radius: 8px;
+            }
+            .menuBar ul li ul li a{
+                white-space: nowrap;
+                padding: 0;
+                border-radius: 4px;
+                transition: all 0.10s;
+                font-weight: normal;
+            }
+            .menuBar ul li ul li a:hover {
+                padding: 8px 14px;
+                background-color: white;
+            }
+            .menuBar ul li a {
+                color: #144fb7;
+                font-weight: bold;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="menuBar">
+            <a href="assets/couverture magazine.JPG" onclick="window.open(this.href, 'photo', 'height=300, width=400, top=0, left=100, toolbar=no, menubar=no, location=no, resizable=yes, scrollbars=yes, status=no'); return false;"><img src="assets/couverture magazine.JPG" id="homeButtonImage"></a>
+            <ul>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="#">Sommaire</a>
+                    <ul>
+                        <li><a href="presentation.php">Présentation</a></li>
+                        <li><a href="etapes_historiques.php">Étapes historiques</a></li>
+                        <li><a href="pieces.php">Pièces</a></li>
+                        <li><a href="technique.php">Technique</a></li>
+                        <li><a href="specificite.php">Spécificité</a></li>
+                        <li><a href="article_echo_des_copeaux.php">Article de l'écho des copeaux</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </nav>
+    </body>

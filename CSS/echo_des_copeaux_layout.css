@@ -1,0 +1,59 @@
+#PDFLogo{
+  max-height: 1.5rem;
+}
+#EDCDownloadButton{
+  float: right;
+  transition: 0.5s;
+  font-family: Roboto;
+  border: 0.25;
+  border-color: rgba(0, 0, 0, 0.6);
+  line-height: 2.5em;
+  padding: 0 20px;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  background-color: rgb(210, 230, 250);
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6), inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+#EDCDownloadButton:hover{
+  transition: 0.5s;
+  margin-top: 2px;
+  background-color: rgb(180, 220, 250);
+}
+#EDCDownloadButton:active{
+  transition: 0.01s;
+  margin-top: 2px;
+  background-color: rgb(100, 140, 170);
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+#EDCDownloadButton a{
+  text-decoration: none;
+  color: #3d3f57;
+}
+/*_________________________________________________________Accordion styles___________________________________________________*/
+.accordion {
+  background-color: #ecf0f1;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #ecf0f1;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
