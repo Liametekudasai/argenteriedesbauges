@@ -1,3 +1,2 @@
 # argenteriedesbauges
-site de l'argenterie des bauges
-teset numero 2
+site de l'argenterie des bauges créé par  liam ROSSI pour Jean-Paul ROSSI
