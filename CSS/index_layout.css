@@ -1,0 +1,9 @@
+.imgContainer{
+    width: 25vw;
+    padding: 10px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
