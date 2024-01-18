@@ -7,14 +7,15 @@
 		src: url("../assets/Montserrat-Bold.otf");
 }
 html{
-	background-color: #ecf0f1;
+	/*background-color: #ecf0f1;*/
+	background-image: url(../assets/tutoriel-photoshop-texture-bois-03.jpg);
 }
 strong{
 	font-family: 'Montserrat-Bold';
 }
 body{
 	font-family: 'Montserrat';
-	background-color: #ecf0f1;
+	/*background-color: #ecf0f1;*/
 	margin: 0;
 }
 h1{
