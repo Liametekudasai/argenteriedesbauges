@@ -7,8 +7,8 @@
 		src: url("../assets/Montserrat-Bold.otf");
 }
 html{
-	/*background-color: #ecf0f1;*/
-	background-image: url(../assets/tutoriel-photoshop-texture-bois-03.jpg);
+	background-color: #ecf0f1;
+	/*background-image: url(../assets/tutoriel-photoshop-texture-bois-03.jpg);*/
 }
 strong{
 	font-family: 'Montserrat-Bold';

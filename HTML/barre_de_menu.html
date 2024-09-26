@@ -17,29 +17,44 @@
                 margin: 0;
             }
 
-            #homeButtonImage{
-                height: 5em;
-                width: auto;
-                float: left;
-                padding: 1em 20px;
+            .titleBar{
+                height: 160px;
+                width: 100vw;
+                background-color: #ecf0f1;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                align-content: stretch;
+                justify-items: start;
+                justify-content: center;
+            }
+            #titleBarImage{
+                height: 140px;
+            }
+            #titleBarTitle{
+                font-family: "Montserrat-Bold";
+                font-size: 40px;
+                color: #6a6562;
+                padding-left: 30px;
+                margin-right: 130px;
             }
             .menuBar{
-                height: 7em;
-                width: 100%;
+                height: 80px;
+                width: 100vw;
                 background-color: #babdbe;
-                background-image: url(../assets/menubar_background.jpg);
-                border-radius: 0px 0px 40px 40px;
+                /* border-radius: 0px 0px 40px 40px; */
             }
             .menuBar ul{
-                margin: 0;
-                padding: 1em;
-                float: left;
-                z-index: 1000;
+                margin:0px;
+                padding:0px 0px 0px calc(50vw - 192px);
+                /* z-index: 1000; */
             }
             .menuBar ul li {
+                margin: 0px;
                 float: left;
                 list-style: none;
-                position: relative;
+                /* position: relative; */
             }
             .menuBar ul li a{
                 display: grid;
@@ -77,15 +92,19 @@
                 background-color: white;
             }
             .menuBar ul li a {
-                color: #144fb7;
+                color: #b66600;
                 font-weight: bold;
             }
 
         </style>
     </head>
     <body>
+        <nav class="titleBar">
+            <a href="../assets/couverture magazine.JPG" onclick="window.open(this.href, 'photo', 'height=300, width=400, top=0, left=100, toolbar=no, menubar=no, location=no, resizable=yes, scrollbars=yes, status=no'); return false;"><img src="../assets/couverture_magazine_detoure_rogne.png" id="titleBarImage"></a>
+            <h1 id="titleBarTitle">Argenterie des Bauges</h1>
+        </nav>
         <nav class="menuBar">
-            <a href="../assets/couverture magazine.JPG" onclick="window.open(this.href, 'photo', 'height=300, width=400, top=0, left=100, toolbar=no, menubar=no, location=no, resizable=yes, scrollbars=yes, status=no'); return false;"><img src="../assets/couverture magazine.JPG" id="homeButtonImage"></a>
+            <!--<img src="../assets/couverture magazine.JPG" id="homeButtonImage">-->
             <ul>
                 <li><a href="../index.php">Accueil</a></li>
                 <li><a href="#">Sommaire</a>

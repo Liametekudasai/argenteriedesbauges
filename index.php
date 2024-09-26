@@ -21,7 +21,6 @@
         </div>
     <?php include "HTML/counter.html"?>
     <p>
-        site mis a jour le 22/06/2023
+        site mis a jour le 25/09/2024
     </p>
 </body>
-
