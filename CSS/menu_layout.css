@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/Montserrat-Regular.otf')
+}
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../assets/Montserrat-Bold.otf');
+}
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+}
+
+.titleBar {
+    height: 160px;
+    width: 100vw;
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: stretch;
+    justify-items: start;
+    justify-content: center;
+}
+
+#titleBarImage {
+    height: 140px;
+}
+
+#titleBarTitle {
+    font-family: "Montserrat-Bold";
+    font-size: 40px;
+    color: #6a6562;
+    padding-left: 30px;
+    margin: 0 130px 0 0;
+}
+
+.menuBar {
+    height: 80px;
+    width: 100vw;
+    background-color: #babdbe;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #b66600;
+    transition: all 0.3s ease-in-out;
+}
+
+.menuBar ul {
+    margin: 0;
+    padding: 0 0 0 calc(50vw - 192px);
+}
+
+.menuBar ul li {
+    margin: 0;
+    float: left;
+    list-style: none;
+}
+
+.menuBar ul li a {
+    display: grid;
+    font-size: 24px;
+    padding: 20px 14px;
+    text-decoration: none;
+    color: #b66600;
+    font-weight: bold;
+}
+
+.menuBar ul li ul {
+    display: grid;
+    box-sizing: content-box;
+    max-height: 0;
+    position: absolute;
+    background-color: #babdbe;
+    padding: 0;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    transition: all 0.25s;
+}
+
+.menuBar ul li:hover ul {
+    max-height: 300%;
+    padding: 8px 8px 16px 8px;
+}
+
+.menuBar ul li ul li {
+    width: auto;
+    border-radius: 8px;
+}
+
+.menuBar ul li ul li a {
+    white-space: nowrap;
+    padding: 0;
+    border-radius: 4px;
+    transition: all 0.10s;
+    font-weight: normal;
+}
+
+.menuBar ul li ul li a:hover {
+    padding: 8px 14px;
+    background-color: white;
+}
+/*--------------phone menu bar-----------------*/
+@media screen and (max-width: 768px) {
+    .titleBar {
+        height: auto;
+        padding: 10px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        position: relative;
+    }
+
+    #titleBarImage {
+        height: 100px;
+        margin-left: 10px;
+    }
+
+    #titleBarTitle {
+        font-size: 24px;
+        padding: 10px 0;
+        margin: 0;
+        text-align: center;
+        flex-grow: 1;
+    }
+
+    .menuBar {
+        height: auto;
+        padding: 10px;
+        /*background-color: whitesmoke;*/
+        background-image: linear-gradient(to bottom, rgba(236, 240, 241, 1), rgba(236, 240, 241, 0.5));
+        border-radius: 0 0 15px 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 100;
+        position: static;
+        margin-right: 10px;
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    #menu-items {
+        display: none;
+        width: 100%;
+        padding: 0;
+        margin-top: 60px;
+    }
+
+    #menu-items.active {
+        display: block;
+    }
+
+    .menuBar ul li {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menuBar ul li a {
+        padding: 15px;
+        font-size: 20px;
+        display: block;
+    }
+
+    .menuBar ul li ul {
+        position: static;
+        width: 100%;
+        background-color: #a3a6a7;
+        max-height: 0;
+        border-radius: 8px;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .menuBar ul li:hover ul {
+        max-height: 500px;
+        padding: 0;
+    }
+
+    .menuBar ul li ul li {
+        width: 100%;
+    }
+
+    .menuBar ul li ul li a {
+        padding: 10px;
+        font-size: 18px;
+    }
+}

@@ -1,26 +1,49 @@
-p{
-  padding: 0px 0px 0px calc(50vw - 35ch);
-  margin: 0px;
+.panel p{
+  padding: 0 1rem;
+  margin: 1rem auto;
+  max-width: 70ch;
 }
 .row{
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-  align-content: stretch;
-  flex-wrap: nowrap;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 1rem;
 }
 .row p{
-  max-width: 40ch;
-  padding-left: 0;
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+  margin: 0;
 }
-.row .imgResize{/* 70 */
-  max-width: 30ch;
+.row .imgResize{
+  max-width: 100%;
+  width: 400px;
+  height: auto;
 }
-ul{
-  padding: 0px 0px 0px calc(50vw - 35ch);
+.panel ul{
+  padding: 0 1rem 0 2.5rem;
   max-width: 70ch;
+  margin: 1rem auto;
   text-align: justify;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  list-style-position: outside;
+}
+
+@media screen and (max-width: 768px) {
+  .panel ul {
+    padding: 0 0.8rem 0 2rem;
+    list-style-type: disc;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .panel ul {
+    padding: 0 0.5rem 0 1.5rem;
+    text-align: left;
+  }
 }
 #PDFLogo{
   max-height: 1.5rem;
@@ -58,26 +81,86 @@ ul{
 }
 /*_________________________________________________________Accordion styles___________________________________________________*/
 .accordion {
-  background-color: #ecf0f1;
+  background-color: rgba(236, 240, 241, 0.95);
   color: #444;
   cursor: pointer;
-  padding: 18px;
+  padding: 1rem;
   width: 100%;
+  max-width: 1200px;
   border: none;
-  text-align: left;
+  text-align: center;
   outline: none;
-  font-size: 15px;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
   transition: 0.4s;
+  border-radius: 5px 5px 0 0;
+  margin: 1rem auto 0;
+  display: block
 }
 
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: rgba(204, 204, 204, 0.95);
 }
 
 .panel {
-  /* padding: 0 18px; */
-  background-color: #ecf0f1;
+  background-color: rgba(236, 240, 241, 0.95);
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
+  border-radius: 0 0 5px 5px;
+  margin: 0 auto 1rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.panel p, .panel .row {
+  padding: 0 1rem;
+  margin: 1rem auto;
+}
+
+.accordion.active + .panel {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+  
+  .row p {
+    min-width: 100%;
+    padding: 0 0.5rem;
+  }
+  
+  .row .imgResize {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .panel p, .panel ul {
+    padding: 0 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .accordion {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .row {
+    padding: 0.3rem;
+  }
+  
+  .panel p, .panel ul {
+    padding: 0 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .accordion {
+    padding: 0.5rem;
+    font-size: 0.95rem;
+  }
 }

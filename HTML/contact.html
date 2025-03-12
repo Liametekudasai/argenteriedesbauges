@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Contactez l'Argenterie des Bauges pour une visite d'atelier et une démonstration de tournage à la perche">
+        <title>Contact - L'Argenterie des Bauges</title>
         <link rel="stylesheet" href="../CSS/general_layout.css">
         <link rel="stylesheet" href="../CSS/contact_layout.css">
-    </head>
     <body>
         <h1>Contact</h1>
         <div class="container">
@@ -17,29 +19,38 @@
                     <div class="row">
                         <p class="imgDescription">je suis aussi contactable (plus difficilement) par mail à <span><a href="mailto:argenteriedesbauges@free.fr?subject=mail%20a%20l'argenterie%20des%20bauges" target="_top">argenteriedesbauges@free.fr</a></span>.</p>
                     </div>
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-                    <a href="https://maps.app.goo.gl/wuDTouw1bZedmMyU8"><video id="video" muted>
-                    <source src="../assets/zoom_thoiry.mp4" type="video/mp4">
-                    </video></a>
-                    <script type="text/javascript">
-                        var video = document.getElementById('video');
-                        var intervalRewind;
-                        
-                        $("#video").on("mouseover", function(event) {
-                                clearInterval(intervalRewind);
-                                this.play();
-                                
-                            }).on('mouseout', function(event) {
-                                intervalRewind = setInterval(function(){
-                                    video.pause();
-                                    video.currentTime -= 0.1
-                                    if(video.currentTime == 0){
-                                        clearInterval(intervalRewind);
-                                    }
-                                },35);
-                            });
-                    </script>
+                    <div class="map-container">
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                        <a href="https://maps.app.goo.gl/wuDTouw1bZedmMyU8" target="_blank" rel="noopener noreferrer">
+                            <video id="video" muted>
+                                <source src="../assets/zoom_thoiry.mp4" type="video/mp4">
+                                Votre navigateur ne supporte pas la lecture de vidéos.
+                            </video>
+                        </a>
+                    </div>
                 </div>
-                
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const video = document.getElementById('video');
+                let intervalRewind;
+
+                video.addEventListener('mouseover', function() {
+                    clearInterval(intervalRewind);
+                    this.play();
+                });
+
+                video.addEventListener('mouseout', function() {
+                    intervalRewind = setInterval(function() {
+                        video.pause();
+                        video.currentTime -= 0.1;
+                        if(video.currentTime <= 0) {
+                            clearInterval(intervalRewind);
+                            video.currentTime = 0;
+                        }
+                    }, 35);
+                });
+            });
+        </script>
     </body>
 </html>

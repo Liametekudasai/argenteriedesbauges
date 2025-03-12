@@ -1,102 +1,9 @@
-<!DOCTYPE html> <!--obligatoire pour l'écriture HTML-->
-<html> <!--obligatoire pour l'écriture HTML-->
+<!DOCTYPE html>
+<html lang="fr">
     <head>
-        <meta charset="utf-8" /> <!--donne la forme de language toujours utf-8-->
-        <style type="text/css">
-            @font-face {
-                font-family: 'Montserrat';
-                src: url('../assets/Montserrat-Regular.otf')
-            }
-            @font-face {
-                font-family: 'Montserrat-Bold';
-                src: url('../assets/Montserrat-Bold.otf');
-            }
-
-            body{
-                font-family: 'Montserrat';
-                margin: 0;
-            }
-
-            .titleBar{
-                height: 160px;
-                width: 100vw;
-                background-color: #ecf0f1;
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                align-items: center;
-                align-content: stretch;
-                justify-items: start;
-                justify-content: center;
-            }
-            #titleBarImage{
-                height: 140px;
-            }
-            #titleBarTitle{
-                font-family: "Montserrat-Bold";
-                font-size: 40px;
-                color: #6a6562;
-                padding-left: 30px;
-                margin: 0 130px 0 0;
-            }
-            .menuBar{
-                height: 80px;
-                width: 100vw;
-                background-color: #babdbe;
-                /* border-radius: 0px 0px 40px 40px; */
-            }
-            .menuBar ul{
-                margin:0px;
-                padding:0px 0px 0px calc(50vw - 192px);
-                /* z-index: 1000; */
-            }
-            .menuBar ul li {
-                margin: 0px;
-                float: left;
-                list-style: none;
-                /* position: relative; */
-            }
-            .menuBar ul li a{
-                display: grid;
-                font-size: 24px;
-                padding: 24px 14px;
-                text-decoration: none;
-            }
-            .menuBar ul li ul{
-                display: grid;
-                max-height: 0;
-                position: absolute;
-                background-color: #babdbe;
-                padding: 0px;
-                border-radius: 0px 0px 8px 8px;
-                overflow: hidden;
-                transition:all 0.25s;
-            }
-            .menuBar ul li:hover ul{
-                max-height: 300%;
-                padding: 8px;
-            }
-            .menuBar ul li ul li{
-                width: auto;
-                border-radius: 8px;
-            }
-            .menuBar ul li ul li a{
-                white-space: nowrap;
-                padding: 0;
-                border-radius: 4px;
-                transition: all 0.10s;
-                font-weight: normal;
-            }
-            .menuBar ul li ul li a:hover {
-                padding: 8px 14px;
-                background-color: white;
-            }
-            .menuBar ul li a {
-                color: #b66600;
-                font-weight: bold;
-            }
-
-        </style>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/menu_layout.css">
     </head>
     <body>
         <nav class="titleBar">
@@ -104,8 +11,12 @@
             <h1 id="titleBarTitle">Argenterie des Bauges</h1>
         </nav>
         <nav class="menuBar">
-            <!--<img src="../assets/couverture magazine.JPG" id="homeButtonImage">-->
-            <ul>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul id="menu-items">
                 <li><a href="../index.php">Accueil</a></li>
                 <li><a href="#">Sommaire</a>
                     <ul>
@@ -115,10 +26,16 @@
                         <li><a href="../PHP/technique.php">Technique</a></li>
                         <li><a href="../PHP/specificite.php">Spécificité</a></li>
                         <li><a href="../PHP/article_echo_des_copeaux.php">Article de l'écho des copeaux</a></li>
-                        
                     </ul>
                 </li>
                 <li><a href="../PHP/contact.php">Contact</a></li>
             </ul>
         </nav>
+        <script>
+            function toggleMenu() {
+                document.getElementById('menu-items').classList.toggle('active');
+                document.querySelector('.menu-toggle').classList.toggle('active');
+            }
+        </script>
     </body>
+</html>
