@@ -17,10 +17,13 @@
                     <figure><img src="assets/alvrule.gif" class="imgContainer"><figcaption></figcaption></figure>
                     
                 </div>
+                <div class="row">
+                    <p>bonjour et bienvenue sur le site de l'argenterie des bauges, Ici vous pouvez consulter toute sorte de documents historiques sur l'histoire de l'argenterie des bauages, et si vous etes interessés vous pouvez aussi m'appeler pour visiter mon atelier et assisster a une démonstration de tournage en direct</p>
+                    
+                </div>
             </div>
         </div>
-    <?php include "HTML/counter.html"?>
     <p>
-        site mis a jour le 25/09/2024
+        site mis a jour le 06/11/2024
     </p>
 </body>

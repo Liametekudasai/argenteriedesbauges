@@ -1,3 +1,11 @@
+html{
+	background-image: url(../assets/wood_background.jpg);
+	background-size: cover;
+}
 #filmArgenterie{
 	text-align: center;
+}
+p{
+	padding: 0px 0px 0px calc(50vw - 35ch);
+	margin: 0px;
 }

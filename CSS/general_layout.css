@@ -20,19 +20,20 @@ body{
 }
 h1{
 	text-align: center;
-	color: red;
+	color: #742800;
 	font-family: 'arial black';
 }
 
 h2 {
-  color: darkblue;
+  color: #9a3500;
   text-align: center;
 
 }
 
 p{
+	max-width: 70ch;
+	
 	text-align: justify;
-	margin: 10px;
 }
 figure figcaption {
 	text-align: center;

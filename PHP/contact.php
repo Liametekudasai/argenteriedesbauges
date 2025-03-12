@@ -2,4 +2,3 @@
 <?php include "../HTML/barre_de_menu.html"?>
 <!--____________________________________________corps________________________________________-->
 <?php include "../HTML/contact.html"?>
-<?php include "../HTML/map.html"?>

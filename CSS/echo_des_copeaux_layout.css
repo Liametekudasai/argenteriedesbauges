@@ -1,3 +1,27 @@
+p{
+  padding: 0px 0px 0px calc(50vw - 35ch);
+  margin: 0px;
+}
+.row{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: stretch;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.row p{
+  max-width: 40ch;
+  padding-left: 0;
+}
+.row .imgResize{/* 70 */
+  max-width: 30ch;
+}
+ul{
+  padding: 0px 0px 0px calc(50vw - 35ch);
+  max-width: 70ch;
+  text-align: justify;
+}
 #PDFLogo{
   max-height: 1.5rem;
 }
@@ -7,7 +31,7 @@
   font-family: Roboto;
   border: 0.25;
   border-color: rgba(0, 0, 0, 0.6);
-  line-height: 2.5em;
+  line-height: 40px;
   padding: 0 20px;
   font-size: 1.25rem;
   text-align: center;
@@ -51,7 +75,7 @@
 }
 
 .panel {
-  padding: 0 18px;
+  /* padding: 0 18px; */
   background-color: #ecf0f1;
   max-height: 0;
   overflow: hidden;

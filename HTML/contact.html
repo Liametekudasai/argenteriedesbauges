@@ -17,6 +17,28 @@
                     <div class="row">
                         <p class="imgDescription">je suis aussi contactable (plus difficilement) par mail à <span><a href="mailto:argenteriedesbauges@free.fr?subject=mail%20a%20l'argenterie%20des%20bauges" target="_top">argenteriedesbauges@free.fr</a></span>.</p>
                     </div>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                    <a href="https://maps.app.goo.gl/wuDTouw1bZedmMyU8"><video id="video" muted>
+                    <source src="../assets/zoom_thoiry.mp4" type="video/mp4">
+                    </video></a>
+                    <script type="text/javascript">
+                        var video = document.getElementById('video');
+                        var intervalRewind;
+                        
+                        $("#video").on("mouseover", function(event) {
+                                clearInterval(intervalRewind);
+                                this.play();
+                                
+                            }).on('mouseout', function(event) {
+                                intervalRewind = setInterval(function(){
+                                    video.pause();
+                                    video.currentTime -= 0.1
+                                    if(video.currentTime == 0){
+                                        clearInterval(intervalRewind);
+                                    }
+                                },35);
+                            });
+                    </script>
                 </div>
                 
     </body>
